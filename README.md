@@ -1,5 +1,5 @@
 # tinkoff_cafe_web_wrapper-front
-[хостится здесь](https://subelta.github.io/tinkoff_cafe_web_wrapper-front/index.html)
+[хостится здесь](https://python-am-cp.github.io/tinkoff_cafe_web_wrapper-front)
 
 
 
