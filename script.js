@@ -6,7 +6,7 @@ button.addEventListener("click", function() {
     var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
     var xhr = new XHR();
     
-    xhr.open('GET', 'https://1bccc4df.ngrok.io/request_page/', true);
+    xhr.open('GET', 'https://18dd36e1.ngrok.io/request_page/', true);
 
     xhr.onload = function() {
         alert( this.responseText );
