@@ -1,6 +1,15 @@
 "use strict"
 
 var startButton = document.querySelector('.get-started');
+var fileInputs = document.querySelectorAll('input[type="file"]');
+
+fileInputs.forEach(function(input) {
+    input.addEventListener('change', function() {
+        this.parentElement.children[1].classList.toggle("file-selected");
+        this.parentElement.children[1].classList.toggle("label-selected");
+    })
+})
+
 
 startButton.addEventListener("click", function() {
     // Когда форма еще не работала здесь посылался get запрос на локалхост с ngrok
@@ -17,3 +26,5 @@ startButton.addEventListener("click", function() {
     // }
     // xhr.send();
 }) 
+
+

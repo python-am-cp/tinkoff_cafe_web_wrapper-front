@@ -22,13 +22,14 @@
                 <p class="about-desc">
                     Мы - команда, разрабатывающая платформу, призванную помочь аналитикам в проверке 
                     их гипотез и автоматическом тестировании их кода. На данный момент мы частично 
-                    автоматизируем алгоритм  кросс-валидации для команды Tinkoff Cafe, пытающейся предсказать 
-                    заказы людей в одноименном кафе.
+                    автоматизируем алгоритм кросс-валидации для команды Tinkoff Cafe, пытающейся предсказать 
+                    заказы людей в одноименном кафе. Оба проекта учебные. 
                 </p>
                 <a class="get-started" href="#scroll-to-form">Начать</a>
             </div>
         </section>
         <section class="form-wrapper" id="scroll-to-form">
+            <h2 class="visually-hidden">Форма ввода файлов для кросс-валидации</h2>
             <form class="form-research" action="https://tinkoff-web-wrapper.herokuapp.com/form_send/" method="POST" enctype="multipart/form-data">
                 <label for="inp-research-name" class="visually-hidden">Введите название исследования</label>
                 <input type="text" id="inp-research-name" value="Мое исследование" name="research-name" maxlength="60" required>
@@ -42,55 +43,56 @@
             
                 <fieldset>
                     <legend>
-                        Приложите файлы с вашим кодом (<span class="code">.py</span>) и данными (<span class="code">.csv</span>)
+                        Приложите файлы с вашим кодом (<code>.py</code>) и данными (<code>.csv</code>)
                     </legend>
                     <div class="files-wrapper">
                         <div class="file">
+                            <input type="file" id="train-csv" name="Train-csv" required>
                             <label for="train-csv" class="label-file">
                                 <!-- Данные -->
-                                train.csv
+                                <span class="label-text">train.csv</span> 
                             </label>
-                            <input type="file" id="train-csv" name="Train-csv" required>
                         </div>
     
                         <div class="file">
+                            <input type="file" id="menu-train-csv" name="menu-train-csv" required>
                             <label for="menu-train-csv" class="label-file">
                                 <!-- Вспомогательные данные -->
-                                menu-train.csv
+                                <span class="label-text">menu-train.csv</span>
                             </label>
-                            <input type="file" id="menu-train-csv" name="menu-train-csv" required>
                         </div>
 
                         <div class="file">
+                            <input type="file" id="menu-tagged-csv" name="menu-tagged-csv" required>
                             <label for="menu-tagged-csv" class="label-file">
                                 <!-- Вспомогательные данные -->
-                                menu-tagged.csv
+                                <span class="label-text">menu-tagged.csv</span>
                             </label>
-                            <input type="file" id="menu-tagged-csv" name="menu-tagged-csv" required>
                         </div>
     
                         <div class="file">
+                            <input type="file" id="train-py" name="Train-py" required>
                             <label for="train-py" class="label-file">
                                 <!-- Обучающий скрипт -->
-                                train.py
+                                <span class="label-text">train.py</span>
                             </label>
-                            <input type="file" id="train-py" name="Train-py" required>
+                            
                         </div>
     
                         <div class="file">
+                            <input type="file" id="predict-py" name="Predict-py" required>
                             <label for="predict-py" class="label-file">
                                 <!-- Скрипт-предсказатель -->
-                                predict.py
+                                <span class="label-text"></span>predict.py
                             </label>
-                            <input type="file" id="predict-py" name="Predict-py" required>
                         </div>
 
                         <div class="file">
-                            <label for="predict-py" class="label-file">
-                                <!-- Модель -->
-                                solution.py
-                            </label>
                             <input type="file" id="solution-py" name="Solution-py" required>
+                            <label for="solution-py" class="label-file">
+                                <!-- Модель -->
+                                <span class="label-text">solution.py</span>
+                            </label>
                         </div>
 
                     </div>
@@ -98,15 +100,15 @@
                 
                 <div class="user-data">
                     <div class="inp-contacts">
-                        <label for="inp-name" class="label-contact" required>Введите имя</label>
-                        <input type="text" id="inp-name" name="user-name">
-                        <label for="inp-email" class="label-contact" required>Введите email</label>
+                        <label for="inp-name" class="label-contact">Введите имя</label>
+                        <input type="text" id="inp-name" name="user-name" required>
+                        <label for="inp-email" class="label-contact">Введите email</label>
                         <input type="email" id="inp-email" name="user-email" required>
                     </div>
                     <div class="submit">
                         <div>
                             <p class="we-contact-you">Мы пришлем результат вам на почту, как только закончим вычисления</p>
-                            <input type="submit" value="Отправить" href="#">
+                            <input type="submit" value="Отправить">
                         </div>
                     </div>
                 </div>

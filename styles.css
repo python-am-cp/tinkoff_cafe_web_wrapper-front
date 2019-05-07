@@ -26,7 +26,7 @@ body {
 
 .about-us {
     padding-top: 60px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("imgs/guy-code-shrinked.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("imgs/guy-code-2.jpg");
     background-size: cover;
     color: white;
     height: 665px;
@@ -86,7 +86,7 @@ body {
     margin: 70px 0;
     width: 60%;
     background-color: white;
-    padding: 47px;
+    padding: 35px;
     border-radius: 15px;
     border: 2px solid #dd3e3e;
 }
@@ -150,9 +150,49 @@ fieldset {
     width: 200px;
 }
 
+input[type="file"] {
+    display: none;
+}
+
 .label-file {
-    display: block;
+    background-color: lightgrey;
+    border-radius: 3px;
+    padding: 7px 15px;
+    width: auto;
+    display: inline-block;
     margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.label-text {
+    padding: 0px 6px;
+}
+
+.label-file::before {
+    content: url("icons/file-upload.svg")
+}
+
+.label-selected::before {
+    content: url("icons/file-upload-white.svg")
+}
+
+.label-file:active {
+    background-color: #f3d5d5;
+}
+
+
+/* .user-icon {
+    margin-right: 5px;
+    font-size: 1.5rem;
+    width: 16px;
+    height: 16px;
+    color: white;
+} */
+
+.file-selected {
+    background-color: #dd3e3e;
+    color: white;
 }
 
 .user-data {
@@ -161,9 +201,14 @@ fieldset {
     flex-wrap: wrap;
 }
 
+.inp-contacts {
+    width: 300px;
+}
+
 #inp-name,
 #inp-email {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 30px;
 }
 
@@ -194,6 +239,7 @@ input[type=submit] {
     font-family: 'Roboto Slab', serif;
     transition: all 0.2s;
     outline: none;
+    cursor: pointer;
 }
 
 input[type=submit]:hover {
