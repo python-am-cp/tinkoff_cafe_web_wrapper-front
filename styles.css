@@ -129,7 +129,7 @@ textarea {
 
 .simbols-limit {
     width: 100px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: #dd3e3e;
 }
 
@@ -180,15 +180,6 @@ input[type="file"] {
 .label-file:active {
     background-color: #f3d5d5;
 }
-
-
-/* .user-icon {
-    margin-right: 5px;
-    font-size: 1.5rem;
-    width: 16px;
-    height: 16px;
-    color: white;
-} */
 
 .file-selected {
     background-color: #dd3e3e;
@@ -279,4 +270,33 @@ footer {
     justify-content: space-between;
     list-style-type: none;
     padding: 0;
+}
+
+
+@media (max-width: 710px) {
+    html {
+        font-size: 0.9rem;
+    }
+
+    .file {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 0.7rem;
+    }
+
+    .file {
+        width: 150px;
+    }
+    
+    .simbols-limit {
+        display: none;
+    }
+
+    #inp-research-desc {
+        margin-right: 0px;
+    }
 }
