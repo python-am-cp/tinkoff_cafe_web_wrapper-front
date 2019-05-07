@@ -1,20 +1,19 @@
 "use strict"
 
-var button = document.querySelector('.get-started');
+var startButton = document.querySelector('.get-started');
 
-button.addEventListener("click", function() {
-    var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
-    var xhr = new XHR();
-    
-    xhr.open('GET', 'https://18dd36e1.ngrok.io/request_page/', true);
+startButton.addEventListener("click", function() {
+    // Когда форма еще не работала здесь посылался get запрос на локалхост с ngrok
+    // и django, где запускалась однопользовательская логика приложения с заранее помещенными файлами
 
-    xhr.onload = function() {
-        alert( this.responseText );
-    }
-
-    xhr.onerror = function() {
-        alert( 'Ошибка ' + this.status );
-    }
-
-    xhr.send();
+    // var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
+    // var xhr = new XHR();
+    // xhr.open('GET', 'https://18dd36e1.ngrok.io/request_page/', true);
+    // xhr.onload = function() {
+    //     alert( this.responseText );
+    // }
+    // xhr.onerror = function() {
+    //     alert( 'Ошибка ' + this.status );
+    // }
+    // xhr.send();
 }) 

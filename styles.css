@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto Slab', serif;
@@ -48,8 +52,10 @@ body {
 }
 
 .get-started {
-    width: 150px;
-    height: 50px;
+    padding: 11px 35px 13px;
+    text-decoration: none;
+    /* width: 150px;
+    height: 50px; */
     background-color: white;
     color: #dd3e3e;
     border: none;
@@ -64,6 +70,11 @@ body {
     background-color: #dd3e3e;
     color: white;
     transition: all 0.2s;
+}
+
+.get-started:active {
+    background-color: #991a1a;
+    transition: all 0.3s;
 }
 
 .form-wrapper {
@@ -190,6 +201,10 @@ input[type=submit]:hover {
     color: #dd3e3e;
     transition: all 0.2s;
     border: 1px solid #dd3e3e;
+}
+
+input[type=submit]:active {
+    background-color: #f3d5d5;
 }
 
 footer {

@@ -23,12 +23,12 @@
                     Мы - команда, разрабатывающая платформу, призванную помочь аналитикам в проверке 
                     их гипотез и автоматическом тестировании их кода. На данный момент мы частично 
                     автоматизируем алгоритм  кросс-валидации для команды Tinkoff Cafe, пытающейся предсказать 
-                    заказы людей в одноименно кафе
+                    заказы людей в одноименном кафе.
                 </p>
-                <button class="get-started">Начать</button>
+                <a class="get-started" href="#scroll-to-form">Начать</a>
             </div>
         </section>
-        <section class="form-wrapper">
+        <section class="form-wrapper" id="scroll-to-form">
             <form class="form-research" action="https://tinkoff-web-wrapper.herokuapp.com/form_send/" method="POST" enctype="multipart/form-data">
                 <label for="inp-research-name" class="visually-hidden">Введите название исследования</label>
                 <input type="text" id="inp-research-name" value="Мое исследование" name="research-name" maxlength="60" required>
